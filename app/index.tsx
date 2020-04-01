@@ -10,7 +10,7 @@ const start = () =>
     document.getElementById("root")
   );
 
-if (["complete"].includes(document.readyState)) {
+if (["complete", "interactive"].includes(document.readyState)) {
   start();
 } else {
   document.addEventListener("DOMContentLoaded", start);
