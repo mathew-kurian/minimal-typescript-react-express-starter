@@ -1,11 +1,48 @@
 {
-  "presets": [
-    "@babel/preset-typescript",
-    [
-      "@babel/preset-env",
-      {
-        "targets": { "node": "10.15.0" }
-      }
-    ]
-  ]
+  "presets": ["@babel/preset-typescript"],
+  "env": {
+    "app-production": {
+      "presets": [
+        "@babel/preset-react",
+        "@babel/preset-typescript",
+        [
+          "@babel/preset-env",
+          {
+            "targets": { "browsers": "last 2 versions" }
+          }
+        ]
+      ]
+    },
+
+    "app-development": {
+      "presets": [
+        "@babel/preset-react",
+        [
+          "@babel/preset-env",
+          {
+            "targets": { "browsers": "last 2 versions" }
+          }
+        ]
+      ],
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }]
+      ]
+    },
+    "server": {
+      "presets": [
+        "@babel/preset-typescript",
+        [
+          "@babel/preset-env",
+          {
+            "targets": { "node": "10.15.0" }
+          }
+        ]
+      ],
+      "plugins": [
+        ["@babel/plugin-proposal-decorators", { "legacy": true }],
+        ["@babel/plugin-proposal-class-properties", { "loose": true }]
+      ]
+    }
+  }
 }

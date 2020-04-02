@@ -17,7 +17,8 @@
     "noImplicitAny": true,
     "outDir": "./public/scripts",
     "preserveConstEnums": true,
-    "target": "es5"
+    "target": "es5",
+    "skipLibCheck": true
   },
   "exclude": ["node_modules"]
 }
