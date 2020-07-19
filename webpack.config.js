@@ -21,10 +21,11 @@ module.exports = {
   optimization: {
     minimize: process.env.NODE_ENV === "production",
   },
+  stats: "minimal",
   module: {
     rules: [
       {
-        test: /\.(j|t)s(x)?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "esbuild-loader",

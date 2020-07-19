@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import config from "../config.json";
+import { log } from "./log";
+
+log("test esbuild");
 
 export default class App extends Component<
   {
@@ -9,6 +12,7 @@ export default class App extends Component<
     title: string;
   }
 > {
+  static test = 5;
   state = { title: config?.title };
 
   render() {
