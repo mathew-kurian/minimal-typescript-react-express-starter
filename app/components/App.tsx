@@ -9,10 +9,15 @@ export default class App extends Component<
     title: string;
   }
 > {
-  state = { title: config.title };
+  state = { title: config?.title };
 
   render() {
     const title: string = this.state.title;
+    var x = title ?? "t";
+
+    if (!!0) {
+      return;
+    }
 
     return (
       <div>
