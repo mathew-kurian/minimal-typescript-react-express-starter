@@ -12,7 +12,7 @@ export default class App extends Component<
     title: string;
   }
 > {
-  static test = 5;
+  static test = 6;
   state = { title: config?.title };
 
   render() {
