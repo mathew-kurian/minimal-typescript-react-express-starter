@@ -1,6 +1,6 @@
 ## Typescript + React + Express Starter
 
-Starter with Typescript + React + Express (for quick prototypes)
+Starter with Typescript + React + Express (for quick prototypes) via. ESBuild
 
 ## Installation
 
