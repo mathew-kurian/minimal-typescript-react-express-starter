@@ -35,8 +35,8 @@
   },
   "scripts": {
     "start": "node register.js",
-    "build": "export NODE_ENV=production; export BABEL_ENV=app-production; npx webpack --config webpack.config.js",
-    "watch": "export NODE_ENV=development; export BABEL_ENV=app-development; npx webpack --config webpack.config.js"
+    "build": "export NODE_ENV=production; npx webpack --config webpack.config.js",
+    "watch": "export NODE_ENV=development; npx webpack --config webpack.config.js"
   },
   "author": "Mathew Kurian",
   "license": "ISC"
