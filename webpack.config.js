@@ -1,13 +1,15 @@
 const path = require("path");
 const webpack = require("webpack");
 const ForkTsCheckerWebpackPlugin = require("fork-ts-checker-webpack-plugin");
-const { ESBuildPlugin } = require("esbuild-loader");
+const { ESBuildPlugin } = require("awesome-esbuild-loader");
+
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  watch: process.env.NODE_ENV !== "production",
+  watch: !isProduction,
   devServer: {
-    hot: process.env.NODE_ENV !== "production",
+    hot: !isProduction,
   },
   resolve: {
     modules: ["node_modules"],
@@ -19,7 +21,7 @@ module.exports = {
     filename: "bundle.js",
   },
   optimization: {
-    minimize: process.env.NODE_ENV === "production",
+    minimize: isProduction,
   },
   stats: "minimal",
   module: {
@@ -28,13 +30,14 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
-          loader: "esbuild-loader",
+          loader: "awesome-esbuild-loader",
           options: {
             // All options are optional
             target: "es2015", // default, or 'es20XX', 'esnext'
             jsxFactory: "React.createElement",
             jsxFragment: "React.Fragment",
-            sourceMap: false, // Enable sourcemap
+            sourceMap: !isProduction, // Enable sourcemap
+            minify: isProduction,
           },
         },
       },
