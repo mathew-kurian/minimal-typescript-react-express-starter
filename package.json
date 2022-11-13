@@ -30,7 +30,7 @@
     "react-hot-loader": "^4.12.13",
     "@hot-loader/react-dom": "^16.10.2",
     "babel-loader": "^8.0.6",
-    "webpack-cli": "^3.3.8",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.8.1",
     "fork-ts-checker-webpack-plugin": "^4.1.2"
   },
