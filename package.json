@@ -4,7 +4,7 @@
   "description": "Typescript boilerplate for React & Express app (compiled via. rollup)",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "repository": {
     "url": "https://github.com/mathew-kurian/typescript-react-express-starter.git"
